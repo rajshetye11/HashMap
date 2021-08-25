@@ -37,6 +37,18 @@ public class MyLinkedList<K> {
 	}
 
 	
+	public void delete(K myNode) {
+		INode<K> tempNode = this.head;
+		while(tempNode != null) {
+			if(tempNode.getNext().getKey().equals((K)myNode)) {
+				INode<K> temp = tempNode.getNext().getNext();
+				tempNode.setNext(temp);
+				break;
+			}
+			tempNode = tempNode.getNext();
+		}
+	}
+	
 	public INode search(K key) {
 		INode tempNode = head;
 		while (tempNode != null) {

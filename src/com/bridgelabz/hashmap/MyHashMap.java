@@ -25,6 +25,16 @@ public class MyHashMap<K,V> {
 		}
 	}
 	
+	public void remove(K key) {
+		MyMapNode<K,V> myMapNode = (MyMapNode<K,V>) this.linkedlist.search(key);
+		if(myMapNode != null) {
+			linkedlist.delete(key);
+		}else {
+			System.out.println("No available nodes to remove of "+key);
+		}
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "MyHashMapNodes {" +linkedlist+ "}";
