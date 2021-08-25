@@ -15,7 +15,7 @@ public class MyHashRunner {
 			}
 			myHashMap.add(word, value);
 		}
-		System.out.println(myHashMap.get("to"));
+		System.out.println(myHashMap.get("be"));
 		System.out.println(myHashMap);
 
 	}
